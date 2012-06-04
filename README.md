@@ -12,7 +12,7 @@ Dados de login são o e-mail de cada um com o primeiro_nome@gmail.com. Por exemp
 
 O objetivo de compartilhar é de servir como referência (não cópia). Caso alguem nao entenda alguma parte do código pode me avisar. 
 
-Criei uma interface customizada para a rede social que ficou bem legal. Sugiro que rodem a app para ver como ficou primeiro e entender as funcionalidades.
+Criei uma interface customizada para a rede social que ficou bem legal. Sugiro que rodem a app para ver como ficou primeiro e entender as funcionalidades e não esquecer de mudar os dados de conexão com banco.
 
 Abraços.
 
