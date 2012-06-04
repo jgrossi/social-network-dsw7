@@ -1,0 +1,16 @@
+<div class="message" id="message_<%= message.id %>">
+	<div>
+		<%= link_to(user_message_url(@user, message), :method => :delete, :remote => true, :class => 'pull-right', :title => 'Remove') do %>
+			<i class="icon-trash"></i>
+		<% end %>
+		<% if(!message.author.avatar.exists?) %>
+			<%= image_tag 'missing.png', :width => 40, :height => 40, :class => 'pull-left' %>
+		<% else %>
+			<%= image_tag message.author.avatar.url(:thumb), :width => 40, :height => 40, :class => 'pull-left' %>
+		<% end %>
+		<div class="body">
+			<%= link_to message.author.name, message.author %>
+			<p class="body-data"><%= message.text %></p>
+		</div>
+	</div>
+</div>

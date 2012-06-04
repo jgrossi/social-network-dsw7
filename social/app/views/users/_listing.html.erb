@@ -1,0 +1,43 @@
+<% if(@users.any?) %>
+	<table class="table table-striped users_table">
+		<tr>
+			<th style="width: 70px">Friend</th>
+			<th></th>
+			<th>E-mail</th>
+			<th>Last Login</th>
+			<th>Created</th>
+		</tr>
+
+		<% @users.each do |user| %>
+			<tr>
+				<td>
+					<% if(!user.avatar.exists?) %>
+						<%= image_tag 'missing.png', :width => 70, :height => 70 %>
+					<% else %>
+						<%= image_tag user.avatar.url(:thumb), :width => 70, :height => 70 %>
+					<% end %>
+				</td>
+				<td>
+					<p><%= link_to user.name, user %></p>
+					<div class="add-as-friend-<%= user.id %>">
+						<% if(!user.friend?(current_user)) %>
+							<%= link_to(user_friends_path(user), :method => :post, :remote => true, :class => 'btn btn-mini btn-info add-friend') do %>
+								<i class="icon-plus icon-white"></i> Add as Friend
+							<% end %>
+						<% else %>
+							<%= link_to(user_friend_path(current_user, user), :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger remove-friend') do %>
+								<i class="icon-minus icon-white"></i> Remove Friend
+							<% end %>
+						<% end %>
+					</div>
+				</td>
+				<td><%= user.email %></td>
+				<td><%= user.last_sign_in_at %></td>
+				<td><%= user.created_at %></td>
+			</tr>
+		<% end %>
+	</table>
+<% else %>
+	<p class="lead">We could't find any user, sorry! <%= link_to 'Try some new friends', users_path %>.</p>
+<% end %>
+	

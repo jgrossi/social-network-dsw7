@@ -1,0 +1,48 @@
+<h1>My Profile</h1>
+
+<p class="lead">Update or change your profile details.</p>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :class => 'form-horizontal', :html => { :method => :put, :multipart => true }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="control-group">
+		<%= f.label :email, 'E-mail', :class => 'control-label' %>
+  	<%= f.email_field :email, :class => 'span5' %>
+	</div>
+
+  <div class="control-group">
+		<%= f.label :password, :class => 'control-label' %>
+		<div class="controls">
+			<%= f.password_field :password, :autocomplete => "off" %>
+			<span class="help-block">(leave blank if you don't want to change it)</span>
+		</div>
+  </div>
+
+  <div class="control-group">
+		<%= f.label :password_confirmation, 'Password Again', :class => 'control-label' %>
+		<div class="controls">
+			<%= f.password_field :password_confirmation %>
+		</div>
+  </div>
+
+  <div class="control-group">
+		<%= f.label :current_password, 'Current Password' %>
+		<div class="controls">
+			<%= f.password_field :current_password %>
+			<span class="help-block">(we need your current password to confirm your changes)</span>
+		</div>
+  </div>
+
+	<div class="control-group">
+		<%= f.label :avatar, 'Profile Image', :class => 'control-label' %>
+		<div class="controls">
+			<%= f.file_field :avatar %>
+		</div>
+	</div>
+
+  <div class="form-actions">
+		<%= f.submit "Update Profile", :class => 'btn btn-primary' %>
+	</div>
+<% end %>
+
+<p class="lead">Unhappy? If you want you can <%= link_to "cancel your account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>

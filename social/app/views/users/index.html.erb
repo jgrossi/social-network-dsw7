@@ -1,0 +1,10 @@
+<% if(!@query.nil?) %>
+	<h1>Searching <small>Let's find new friends!</small></h1>
+	<h2>Search results for: <em><%= @query %></em></h2>
+<% else %>
+	<h1>Find New Friends <small>Who isn't my friend yet?</small></h1>
+	<p class="lead">Here there are some interesting friends maybe you want.</p>
+<% end %>
+
+<%= render :partial => 'listing' %>
+

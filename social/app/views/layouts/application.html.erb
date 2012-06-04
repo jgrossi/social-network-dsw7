@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My.Social | by Junior Grossi [juniorgro@gmail.com] </title>
+  <%= stylesheet_link_tag "styles", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="<%= root_path %>"></a>
+        </div>
+        <% if (!current_user.nil?) %>
+            <ul>
+                <li><a href="<%= root_path %>">Updates</a></li>
+                <li><a href="<%= friends_path %>">Friends List</a></li>
+                <li><a href="<%= users_path %>">Find New Friends</a></li>
+            </ul>
+            <div class="search">
+                <%= form_for(:user, :url => {:controller => :users, :action => :index}, :method => :get, :html => {:id => 'search-form'}) do |f| %>
+                    <%= f.text_field :name, :placeholder => 'Search for friends...' %>
+                <% end %>
+            </div>
+        <% end %>
+        <div class="user-header"><%= user_header %></div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container">
+        <% if(!notice.nil?) %>
+            <div id="notice" class="alert alert-success"><%= notice %></div>
+        <% end %>
+        <%= yield %>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        PUC Minas | &copy; 2012 Junior GROSSI [juniorgro@gmail.com] | DSW7 | Matrícula: 35713
+    </div>
+</div>
+
+</body>
+</html>

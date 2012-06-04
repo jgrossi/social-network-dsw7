@@ -1,0 +1,3 @@
+var post = $("<%= escape_javascript(render(:partial => @post)) %>");
+$(".posts").prepend(post.fadeIn(300));
+$(".new-post textarea").val('');

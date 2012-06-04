@@ -1,0 +1,5 @@
+var button = '<button class="btn btn-mini friend"><i class="icon-ok"></i> Now You\'re Friends</button>';
+$(".add-as-friend-<%= @friend_id %> a.add-friend").fadeOut(300, function(){
+    $(this).replaceWith(button);
+});
+

@@ -1,0 +1,6 @@
+var link = $("<%= escape_javascript(render :partial => 'friends/add_friend_again') %>");
+
+$(".add-as-friend-<%= @friend_id %> a.remove-friend").fadeOut(300, function(){
+    $(this).replaceWith(link);
+});
+

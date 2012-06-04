@@ -1,0 +1,9 @@
+<h1><%= @user.name %></h1>
+
+<h2>Messages</h2>
+
+<div class="messages">
+	<%= render :partial => 'messages/message', :collection => @user.received_messages %>
+</div>
+
+<%= render :partial => 'messages/form' %>

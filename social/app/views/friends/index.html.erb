@@ -1,0 +1,10 @@
+<h1>My Friends List <small>We're friends</small></h1>
+
+<% if(@users.any?) %>
+	<p class="lead">
+		Cool! You have <%= @users.count %> friend(s) in your friends list. 
+		<%= link_to 'Find new friends!', users_path %>
+	</p>
+<% end %>
+
+<%= render :partial => 'users/listing' %>
