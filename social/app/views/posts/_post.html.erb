@@ -5,7 +5,7 @@
 		<%= image_tag post.author.avatar.url(:thumb), :width => 50, :height => 50, :class => 'pull-left' %>
 	<% end %>
 	<div class="body">
-		<h3><%= link_to post.author.name, post.author %></h3>
+		<h3><%= link_to post.author.avaiable_name, post.author %></h3>
 		<h4>Posted <%= time_ago_in_words(post.created_at) %> ago</h4>
 		<p><%= post.body %></p>
 	</div>
