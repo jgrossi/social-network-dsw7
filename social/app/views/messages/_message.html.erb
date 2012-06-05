@@ -9,7 +9,7 @@
 			<%= image_tag message.author.avatar.url(:thumb), :width => 40, :height => 40, :class => 'pull-left' %>
 		<% end %>
 		<div class="body">
-			<%= link_to message.author.name, message.author %>
+			<%= link_to message.author.avaiable_name, message.author %>
 			<p class="body-data"><%= message.text %></p>
 		</div>
 	</div>

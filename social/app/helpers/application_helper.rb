@@ -8,7 +8,6 @@ module ApplicationHelper
     else
       link_to "Login", new_user_session_url
     end
-      
   end
   
 end

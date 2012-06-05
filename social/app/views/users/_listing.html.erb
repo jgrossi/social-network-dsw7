@@ -18,7 +18,7 @@
 					<% end %>
 				</td>
 				<td>
-					<p><%= link_to user.name, user %></p>
+					<p><%= link_to user.avaiable_name, user %></p>
 					<div class="add-as-friend-<%= user.id %>">
 						<% if(!user.friend?(current_user)) %>
 							<%= link_to(user_friends_path(user), :method => :post, :remote => true, :class => 'btn btn-mini btn-info add-friend') do %>
