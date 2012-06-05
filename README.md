@@ -14,6 +14,8 @@ O objetivo de compartilhar é de servir como referência (não cópia). Caso alg
 
 Criei uma interface customizada para a rede social que ficou bem legal. Sugiro que rodem a app para ver como ficou primeiro e entender as funcionalidades e não esquecer de mudar os dados de conexão com banco.
 
+A app está publicada em http://mysocial.juniorgrossi.com.
+
 Abraços.
 
 Junior GROSSI
