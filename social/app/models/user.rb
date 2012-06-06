@@ -17,11 +17,7 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, :styles => { :medium => "300x300>" , :thumb => "100x100" }
   
   def avaiable_name
-    if self.name.nil? || self.name.empty?
-      name = self.email
-    else
-      name = self.name
-    end
+    name = self.name.nil? || self.name.empty? ? self.email : self.name
   end
   
   def send_mail
