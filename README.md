@@ -19,4 +19,4 @@ A app está publicada em http://mysocial.juniorgrossi.com.
 Abraços.
 
 Junior GROSSI
-juniorgro@gmail.com
+me@juniorgrossi.com

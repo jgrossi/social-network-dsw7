@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar
   
-  after_create :send_mail
+  #after_create :send_mail
   
   has_many :received_messages, :foreign_key => 'destiny_id', :class_name => 'Message'
   has_many :sent_messages, :foreign_key => 'author_id', :class_name => 'Message'
