@@ -4,7 +4,7 @@ Rede Social - DSW7 - PW3
 Detalhes Importantes
 --------------------
 
-Pessoal, ta aí o trabalho de Rails.
+Trabalho de RubyOnRails desenvolvido na Pós-graduação em Desenvolvimento de Aplicações para Web.
 
 A base tem 40 usuários cadastrados inicialmente, com atividades em alguns deles (os primeiros em ordem alfabetica). Todos com avatar (exceto uns 5) e listagem de amigos.
 
